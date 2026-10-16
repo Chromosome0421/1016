@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>個人行程與任務管理系統</title>
+<style>
+:root{font-family:"Segoe UI","Noto Sans TC","Microsoft JhengHei",sans-serif;color:#292a37;background:#f7f8fc;--accent:#7666dc;--soft:#f0edff;--line:#eeeef3}*{box-sizing:border-box}body{margin:0;min-height:100vh;background:var(--page,#f7f8fc)}button,input,select{font:inherit}main{width:min(1050px,calc(100% - 40px));margin:auto;padding:60px 0 90px}.kicker{color:var(--accent);font-size:12px;letter-spacing:.14em;font-weight:700}h1{font-size:clamp(27px,4vw,38px);margin:14px 0 8px}.intro{color:#888;margin:0}.date{display:inline-block;background:white;border:1px solid var(--line);border-radius:12px;padding:11px 15px;margin-top:22px;font-size:14px}.panels{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:30px;align-items:start}.panel{background:white;border:1px solid var(--line);border-radius:20px;padding:23px;box-shadow:0 12px 38px #30264a0d}.heading{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}.heading h2{margin:0;font-size:18px}.heading p{margin:5px 0 0;color:#888;font-size:12px}.count{font-size:11px;color:#777;background:#f5f5f8;padding:6px 10px;border-radius:99px}.list{display:grid;gap:11px}.entry{border:1px solid #eeeef3;border-radius:13px;padding:13px}.entry-label{font-size:12px;color:#777;font-weight:650}.fields{display:grid;grid-template-columns:105px minmax(0,1fr);gap:9px;margin-top:10px}.fields.tasks{grid-template-columns:minmax(0,1fr) 112px}.field{width:100%;min-width:0;height:39px;padding:0 10px;border:1px solid #ededf2;border-radius:9px;background:#fbfbfd;color:#292a37;font-size:13px}.field:focus{outline:2px solid #c9c1ff}.note{font-size:11px;color:#999;margin:14px 0 0}button#theme-toggle{position:fixed;right:25px;bottom:23px;border:0;border-radius:99px;padding:15px 20px;background:#6555c9;color:white;box-shadow:0 8px 24px #5446b94d;cursor:pointer}button#theme-toggle:hover{transform:translateY(-2px)}body.theme-soft{--accent:#b166a5;--soft:#faedf7;--page:#fcf7fb}body.theme-soft .panel{border-radius:25px}body.theme-soft .entry{border-radius:17px}body.theme-soft #theme-toggle{background:#a64d91}body.theme-crisp{--accent:#168a77;--soft:#e9f7f2;--page:#f3f8f6}body.theme-crisp .panel{border-radius:10px;border-top:3px solid var(--accent)}body.theme-crisp .entry{border-radius:7px}body.theme-crisp #theme-toggle{border-radius:10px;background:#167b6c}@media(max-width:700px){main{padding-top:38px}.panels{grid-template-columns:1fr;gap:16px}.panel{padding:19px}button#theme-toggle{right:15px;bottom:15px}}
+</style>
+</head>
+<body>
+<main>
+<header><p class="kicker">✦ MY DAILY DASHBOARD</p><h1>個人行程與任務管理系統</h1><p class="intro">整理今天的節奏，讓每一件重要的小事都恰到好處。</p><div class="date">📅 今天是 <strong id="today-date">載入中…</strong></div></header>
+<section class="panels" aria-label="今日行程與待辦事項">
+<section class="panel"><div class="heading"><div><h2>◷ 固定行程</h2><p>安排今天的重要時刻</p></div><span class="count">共 3 筆</span></div><div class="list">
+<article class="entry"><label class="entry-label" for="schedule-time-1">01　行程一</label><div class="fields"><input class="field" id="schedule-time-1" type="time" aria-label="行程一時間"><input class="field" type="text" placeholder="輸入行程內容" aria-label="行程一內容"></div></article>
+<article class="entry"><label class="entry-label" for="schedule-time-2">02　行程二</label><div class="fields"><input class="field" id="schedule-time-2" type="time" aria-label="行程二時間"><input class="field" type="text" placeholder="輸入行程內容" aria-label="行程二內容"></div></article>
+<article class="entry"><label class="entry-label" for="schedule-time-3">03　行程三</label><div class="fields"><input class="field" id="schedule-time-3" type="time" aria-label="行程三時間"><input class="field" type="text" placeholder="輸入行程內容" aria-label="行程三內容"></div></article>
+</div><p class="note">為行程設定時間與內容，輕鬆掌握每日安排。</p></section>
+<section class="panel"><div class="heading"><div><h2>☷ 待辦事項</h2><p>一步一步完成今天的目標</p></div><span class="count">共 3 筆</span></div><div class="list">
+<article class="entry"><label class="entry-label" for="task-name-1">01　任務一</label><div class="fields tasks"><input class="field" id="task-name-1" type="text" placeholder="輸入待辦事項"><select class="field" aria-label="任務一狀態"><option>尚未開始</option><option>進行中</option><option>已完成</option></select></div></article>
+<article class="entry"><label class="entry-label" for="task-name-2">02　任務二</label><div class="fields tasks"><input class="field" id="task-name-2" type="text" placeholder="輸入待辦事項"><select class="field" aria-label="任務二狀態"><option>尚未開始</option><option>進行中</option><option>已完成</option></select></div></article>
+<article class="entry"><label class="entry-label" for="task-name-3">03　任務三</label><div class="fields tasks"><input class="field" id="task-name-3" type="text" placeholder="輸入待辦事項"><select class="field" aria-label="任務三狀態"><option>尚未開始</option><option>進行中</option><option>已完成</option></select></div></article>
+</div><p class="note">在下拉選單更新任務進度，讓每一份努力看得見。</p></section>
+</section></main>
+<button id="theme-toggle" type="button" aria-label="切換表單外觀">✳　切換表單外觀</button>
+<script>
+(()=>{document.getElementById('today-date').textContent=new Intl.DateTimeFormat('zh-TW',{year:'numeric',month:'long',day:'numeric',weekday:'long'}).format(new Date());const themes=['','theme-soft','theme-crisp'];let current=0;document.getElementById('theme-toggle').addEventListener('click',()=>{current=(current+1)%themes.length;document.body.classList.remove('theme-soft','theme-crisp');if(themes[current])document.body.classList.add(themes[current]);});})();
+</script>
+</body>
+</html>
